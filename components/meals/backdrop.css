@@ -1,0 +1,98 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 9; /* This z-index is lower than the dialog but higher than other elements */
+  backdrop-filter: blur(5px); /* Optional: Adds a blur effect to the backdrop */
+}
+
+.delete-button {
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button:hover,
+.delete-button:active {
+  background: linear-gradient(90deg, #fd4715, #f9b241);
+  box-shadow: 0 0 12px rgba(242, 100, 18, 0.8);
+}
+
+.modal-content {
+  padding: 30px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.modal-actions {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.yes-button,
+.no-button {
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.no-button:hover,
+.no-button:active,
+.yes-button:hover,
+.yes-button:active {
+  background: linear-gradient(90deg, #fd4715, #f9b241);
+  box-shadow: 0 0 12px rgba(242, 100, 18, 0.8);
+}
+
+.spinner-align {
+  display: flex;
+  justify-content: center;
+}
+
+.spinner {
+  margin-top: 20px;
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  text-align: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  color: red;
+  margin-top: 20px;
+}
+
