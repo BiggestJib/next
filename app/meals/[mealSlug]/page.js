@@ -6,7 +6,7 @@ import DeleteMeals from "@/components/meals/deleteMeals";
 import { deleteMeal } from "@/lib/meals";
 
 export async function generateMetadata({ params }) {
-  const meal = await getMeal(params.mealSlug); // Fetch the meal asynchronously
+  const meal = await getMeal(params.mealSlug);
   if (!meal) notFound();
   return {
     title: meal.title,
@@ -15,19 +15,20 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Slug({ params }) {
-  const meal = await getMeal(params.mealSlug); // Fetch the meal asynchronously
-
+  const meal = await getMeal(params.mealSlug);
   if (!meal) {
     notFound();
   }
 
   const handleDeleteFood = async () => {
-    "use server";
+    "use server"; // Make sure this is correctly placed
     await deleteMeal(meal.slug);
-    // console.log(meal.slug);
-    redirect("/meals");
+    redirect("/meals"); // Handle this correctly within the server context
   };
+
+  // Properly format instructions to avoid issues
   meal.instructions = meal.instructions.replace(/\n/g, "<br />");
+
   return (
     <>
       <header className={classes.header}></header>
