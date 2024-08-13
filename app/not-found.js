@@ -1,8 +1,9 @@
 export default function NotFound() {
   return (
-    <main className="not-found">
+    <div>
       <h1>Page Not Found</h1>
-      <p>Unfortunetly, The page you're looking for doesn't exist.</p>
-    </main>
+      <p>Sorry, we couldn&apos;t find the page you were looking for.</p>
+      <p>Let&apos;s get you back on track.</p>
+    </div>
   );
 }
