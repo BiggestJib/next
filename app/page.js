@@ -33,7 +33,10 @@ export default function Home({ params }) {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <Link className={classes.motion} href="/community">
+              <Link
+                className={`${classes.motion} ${classes.import}`}
+                href="/community"
+              >
                 Join the Community
               </Link>
             </motion.div>
@@ -42,7 +45,7 @@ export default function Home({ params }) {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <Link className={`text-white ${classes.motion}`} href="/meals">
+              <Link className={` ${classes.motion}`} href="/meals">
                 Explore Meals
               </Link>
             </motion.div>
