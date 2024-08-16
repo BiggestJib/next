@@ -42,7 +42,7 @@ export default function Home({ params }) {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <Link className={classes.motion} href="/meals">
+              <Link className={`text-white ${classes.motion}`} href="/meals">
                 Explore Meals
               </Link>
             </motion.div>
